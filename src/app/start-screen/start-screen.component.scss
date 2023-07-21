@@ -1,0 +1,29 @@
+.game-container {
+    background-color: gray;
+    background-image: url('/assets/img/background-wood.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .startCard {
+        width: 900px;
+        height: 100%;
+    }
+
+    .start-btn {
+        position: absolute;
+        width: 300px;
+        bottom: 240px;
+        cursor: pointer;
+
+        &:hover {
+            filter: brightness(1.5);
+        }
+    }
+}
