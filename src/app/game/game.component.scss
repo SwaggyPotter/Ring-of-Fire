@@ -1,0 +1,32 @@
+.game-field {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/assets/img/wooden-background.jpeg');
+}
+
+.card-stack {
+    position: relative;
+
+    img {
+        width: 120px;
+        position: absolute;
+    }
+
+    .topCard {
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.1) translateY(-10px);
+            transition: 125ms;
+        }
+    }
+}
+
+.pick-card{
+    transition: all 125ms ease-in-out;
+    transform: scale(1.5) !important;
+}
