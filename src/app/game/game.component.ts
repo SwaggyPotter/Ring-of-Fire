@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { Game } from 'src/models/game';
 
 
 @Component({
@@ -8,12 +8,30 @@ import { CommonModule } from '@angular/common';
   templateUrl: './game.component.html',
   styleUrls: ['./game.component.scss']
 })
+export class GameComponent implements OnInit {
+  pickCardAnimation = false;
+  game!: Game;
+  currentCard: string = '';
 
 
-export class GameComponent {
-  pickCardAnimation = false
-  
+  ngOnInit() {
+    this.newGame()
+  }
+
+  newGame() {
+    this.game = new Game();
+    console.log(this.game)
+  }
+
   takeCard() {
-    this.pickCardAnimation = true;
+    if (!this.pickCardAnimation) {
+      this.currentCard = this.game.stack.pop()!;
+      this.pickCardAnimation = true;
+
+      setTimeout(() => {
+        this.pickCardAnimation = false;
+        this.game.playedCard.push(this.currentCard)
+      }, 1000)
+    }
   }
 }
