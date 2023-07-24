@@ -8,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class PlayerComponent implements OnInit {
   @Input() name: string | undefined;
-
+  @Input() playerActive: boolean = false;
   constructor() {
 
   }
