@@ -1,20 +1,4 @@
 {
-  "targets": {
-    "ring-of-fire-94f93": {
-      "hosting": {
-        "RingOfFire": [
-          "ring-of-fire-94f93"
-        ]
-      }
-    },
-    "myringoffire-856b5": {
-      "hosting": {
-        "RingOfFire": [
-          "myringoffire-856b5"
-        ]
-      }
-    }
-  },
   "projects": {
     "default": "ring-of-fire-94f93"
   }
